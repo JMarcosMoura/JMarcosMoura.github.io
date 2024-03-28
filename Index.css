@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+/*configurar logo*/
+.log{
+  height: auto;
+  width: 50vw;
+}
+
+/*header Charmander*/
+.fire header{
+  text-align: center;
+  flex-direction: column;
+}
+
+/*distanciar o texto da logo e das bordas*/
+.start{
+  padding: 30px 40px;
+}
+
+/*tamanho do título*/
+.start h1, .fire h1{
+  font-size: 70px;
+}
+
+/*tamanho do texto normal*/
+.start p{
+  font-size: 20px;
+}
+
+/*tamanho dos tópicos*/
+.start h3{
+  font-size: 30px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: #6910a4;
+}
+
+/*texto especial para charmander*/
+.fire h1{
+  color: #ed8e17;
+}
+.fire h2{
+  color: #2c6d64;
+}
+.start h4{
+  margin-top: 10px;
+  font-size: 22px;
+  color: #e8860e;
+}
+
+.start h2{
+  margin-right: 10px;
+}
+
+/*distância entre o subtítulo e os elementos que vem abaixo*/
+.start h2{
+  padding-bottom: 60px;
+}
+
+/*distancia do texto normal e o restante dos elementos que vem abaixo*/
+.text1{
+  padding-bottom: 40px;
+}
+
+/*distancia entre paragrafos*/
+.start p{
+  padding-bottom: 10px;
+}
+
+/*ajuste geral dos cards*/
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transform-style: preserve-3d;
+}
+
+/*configurar cards*/
+.container .card{
+  width: 250px;
+  height: 370px;
+  padding: 40px; /*distanciar pokball e nome do pokémon*/
+  margin: 50px; /*distanciar os cards*/
+  
+  border-radius: 30px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  
+  transform-style: preserve-3d;
+}
+
+/*tamanho do texto ( nomes dos pokémons )*/
+.container .card h2 {
+  font-size: 30px;
+  color: #fff;
+  transform-style: preserve-3d;
+}
+
+/*configurar imagens ( pokémons )*/
+.container .card img.produto{
+  transform-style: preserve-3d;
+  transition: .5s;
+  width: 200px;
+  height: 200px;
+}
+
+/*efeito 3d*/
+.container .card:houver img.produto, .container .card:houver button{
+  transform: translate3d(0,0,100px);
+}
+
+/*configuração dos botões (pokball)*/
+.container .card .pokball{
+  height: 75px;
+  margin: 0;
+}
+.container .card button{
+  border-radius: 50%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: .5s;
+}
+
+/*adcionar cor aos cards*/
+.container div.card1{
+  background-image: linear-gradient(45deg, #ff8c00,#FFD500);
+}
+.container div.card2{
+  background-image: linear-gradient(45deg, #003cff,#00f7ff);
+}
+.container div.card3{
+  background-image: linear-gradient(45deg,#5cae81, #6eeb6e);
+}
+
+/*responsivo*/
+@media screen and (max-width: 900px){
+  .container{
+    flex-direction: column;
+  }
+}
+
+hr{
+  height: 1px;
+  border-color: #6910a4;
+}
+
+.fire hr {
+  border-color: #ed9528;
+  height: 1px;
+  border-style: solid;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.paraf hr {
+  border-style: dashed;
+  border-color: green;
+  margin-left: 10px;
+}

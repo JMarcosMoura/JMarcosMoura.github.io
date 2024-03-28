@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="Pt">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <link rel="stylesheet" href="Index.css">
+  <title>POKÉMON INSIDE</title>
+ </head>
+ 
+ 
+ <body>
+   
+   <!-- logo do site -->
+   <header>
+     <img class="log" src="Imagens/logo.png" alt="">
+   </header>
+   
+   <main class="meio">
+     
+     <div class="start">
+       <section>
+         
+       <h1>Olá, Treinador!</h1>
+       
+       <h2>bem-vindo ao Pokémon Enside</h2>
+       
+    <hr />
+       
+       <div class="text1">
+         <h3>No que consiste o site?</h3>
+         <p>Este site é dedicado a fornecer informações detalhadas sobre cada Pokémon do universo Pokémon. Aqui, você encontrará tudo o que precisa saber sobre seus Pokémon favoritos, desde suas estatísticas e habilidades até seus habitats e comportamentos.</p>
+        </div>
+       
+       <div class="text1">
+         <h3>Como iniciar?</h3>
+         <p>No Pokémon Enside basta observar a biblioteca de Pokémons disponiveis até achar aquele do qual você quer saber mais. Achado esse Pokémon, basta clicar na pokebola que ficar junto á ele; assim você será redirecionado a uma página com as informações do seu Pokémon.</p>
+       </div>
+     </section>
+     </div>
+   
+   <!-- conteudo dos cards -->
+   <div class="container">
+     
+     <div class="card card1">
+       <h2>CHARMANDER</h2>
+       <img src="Imagens/laranja.png" alt="" class="produto">
+       <a href="laranja.html" target="_blank">
+       <button>
+         <img src="imagens/pok.png" alt="" class="pokball">
+       </button>
+       </a>
+     </div>
+     
+     <div class="card card2">
+       <h2>SQUIRTLE</h2>
+       <img src="Imagens/azul.png" alt="" class="produto">
+       <a href="azul.html" target="_blank">
+       <button>
+         <img src="imagens/pok.png" alt="" class="pokball">
+         </button>
+         </a>
+     </div>
+     
+     <div class="card card3">
+       <h2>BULBASAUR</h2>
+       <img src="Imagens/verde.png" alt="" class="produto">
+       <a href="verde.html" target="_blank">
+       <button>
+         <img src="imagens/pok.png" alt="" class="pokball">
+       </button>
+       </a>
+    </div>
+     
+   </div>
+   
+   </main>
+   
+   <!-- comando para o efeito 3d -->
+   <script>
+     VanillaTilt.init(document.querySelectorAll(".card"), {
+       max: 25,
+       speed: 400
+	    });
+   </script>
+   
+   
+ </body>
+</html>
