@@ -5,6 +5,7 @@
 }
 body{
   height: 100vh;
+  font-family: Helvetica;
 }
 
 header{
@@ -121,6 +122,7 @@ header{
   transition: .5s;
   width: 200px;
   height: 200px;
+  transform: translateZ(20px);
 }
 
 /*efeito 3d*/
@@ -130,7 +132,7 @@ header{
 
 /*configuração dos botões (pokball)*/
 .container .card .pokball{
-  height: 75px;
+  height: 80px;
   margin: 0;
 }
 .container .card button{
@@ -175,4 +177,9 @@ hr{
   border-style: dashed;
   border-color: green;
   margin-left: 10px;
+}
+
+.fire img{
+  height: 350px;
+  padding-top: 40px;
 }
