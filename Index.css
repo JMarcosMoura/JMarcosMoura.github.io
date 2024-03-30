@@ -10,7 +10,9 @@ body{
 
 header{
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 30px 0px;
 }
 
@@ -20,68 +22,97 @@ header{
   width: 50vw;
 }
 
+/*config. link*/
+.link{
+  text-align: center;
+}
+
 /*header Charmander*/
 .fire header{
   text-align: center;
   flex-direction: column;
 }
 
-/*distanciar o texto da logo e das bordas*/
+/*header Squirtle*/
+.water header{
+  
+}
+
+/*header Bulbasaur*/
+.tree header{
+  
+}
+
+/*distanciar os elementos da logo e das bordas*/
 .start{
   padding: 30px 40px;
 }
 
-/*tamanho do título*/
-.start h1, .fire h1{
+/*_______________*/
+/*CONFIG. DOS TEXTOS*/
+p{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+h1{
   font-size: 70px;
 }
-
-/*tamanho do texto normal*/
-.start p{
-  font-size: 20px;
+h2{
+  margin-right: 10px;
 }
-
-/*tamanho dos tópicos*/
-.start h3{
+h3{
   font-size: 30px;
   margin-top: 20px;
   padding-bottom: 10px;
   color: #6910a4;
 }
-
-/*texto especial para charmander*/
+h4{
+  margin-top: 10px;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+/*distanciar o subtítulo dos elementos abaixo:*/
+.start h2{
+  padding-bottom: 60px;
+}
+/*textos especiais para charmander:*/
 .fire h1{
-  color: #ed8e17;
+  color: #ef8504;
+  font-size: 60px;
 }
 .fire h2{
   color: #2c6d64;
 }
-.start h4{
-  margin-top: 10px;
-  font-size: 22px;
+.fire h4{
   color: #e8860e;
 }
-
-.start h2{
-  margin-right: 10px;
+.fire .verde strong{
+  color: #007765;
 }
-
-/*distância entre o subtítulo e os elementos que vem abaixo*/
-.start h2{
-  padding-bottom: 60px;
+/*textos especiais para Squirtle*/
+.water h1{
+  color: #2589e0;
+  font-size: 60px;
 }
-
-/*distancia do texto normal e o restante dos elementos que vem abaixo*/
+.water h2{
+  color: #85532a;
+}
+.water h4{
+  color: #1869af;
+}
+.water .marrom strong{
+  color: #85532a;
+}
+ataques{
+  color: #02975a;
+}
+/*distancia do texto normal e o restante dos elementos que vem abaixo e ajuste dos cards:*/
 .text1{
   padding-bottom: 40px;
 }
 
-/*distancia entre paragrafos*/
-.start p{
-  padding-bottom: 10px;
-}
-
-/*ajuste geral dos cards*/
+/*_______________*/
+/*AJUSTE DOS CARDS*/
 .container{
   width: 100%;
   height: 100%;
@@ -91,16 +122,14 @@ header{
   
   transform-style: preserve-3d;
 }
-
 /*configurar cards*/
 .container .card{
   width: 250px;
   height: 370px;
   padding: 40px; /*distanciar pokball e nome do pokémon*/
   margin: 50px; /*distanciar os cards*/
-  
+  margin-top: -30px;
   border-radius: 30px;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,15 +137,13 @@ header{
   
   transform-style: preserve-3d;
 }
-
-/*tamanho do texto ( nomes dos pokémons )*/
+/*tamanho do texto nos cards:*/
 .container .card h2 {
   font-size: 30px;
   color: #fff;
   transform-style: preserve-3d;
 }
-
-/*configurar imagens ( pokémons )*/
+/*configurar imagens dos cards:*/
 .container .card img.produto{
   transform-style: preserve-3d;
   transition: .5s;
@@ -124,25 +151,11 @@ header{
   height: 200px;
   transform: translateZ(20px);
 }
-
-/*efeito 3d*/
+/*efeito 3d:*/
 .container .card:houver img.produto, .container .card:houver button{
   transform: translate3d(0,0,100px);
 }
-
-/*configuração dos botões (pokball)*/
-.container .card .pokball{
-  height: 80px;
-  margin: 0;
-}
-.container .card button{
-  border-radius: 50%;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: .5s;
-}
-
-/*adcionar cor aos cards*/
+/*cor dos cards*/
 .container div.card1{
   background-image: linear-gradient(45deg, #ff8c00,#FFD500);
 }
@@ -153,33 +166,94 @@ header{
   background-image: linear-gradient(45deg,#5cae81, #6eeb6e);
 }
 
-/*responsivo*/
+/*_______________*/
+/*CONFIG. DOS BOTÕES POKBALL*/
+.pokball{
+  height: 80px;
+  margin: 0;
+}
+.container .card button{
+  border-radius: 50%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: .5s;
+}
+
+/*RESPONSIVO*/
 @media screen and (max-width: 900px){
   .container{
     flex-direction: column;
   }
+  .moura h1{
+  font-size: 40px;
+}
 }
 
+/*_______________*/
+/*CONFIGURAÇÃO DAS LINHAS*/
 hr{
   height: 1px;
   border-color: #6910a4;
 }
-
-.fire hr {
-  border-color: #ed9528;
-  height: 1px;
+/*linhas especiais Charmander:*/
+.fire hr, .water hr {
   border-style: solid;
   margin-right: 40px;
   margin-left: 40px;
 }
-
 .paraf hr {
   border-style: dashed;
   border-color: green;
   margin-left: 10px;
 }
+/*linhas especiais Squirtle*/
+.parafwater hr {
+  border-style: dashed;
+  border-color: #914e0e;
+  margin-left: 10px;
+}
+/*linhas especiais Bulbasaur*/
+.tree hr {
+  
+}
 
+/*CONFIG. IMAGEM DAS EVOLUÇÕES*/
 .fire img{
   height: 350px;
   padding-top: 40px;
+}
+.water img{
+  
+}
+.tree img{
+  
+}
+
+.moura .fotomoura{
+  border-radius: 50%;
+  border-style: double;
+  border-top: dashed;
+  border-left-style: dashed;
+  border-top-color: #31ad31;
+  border-left-color: #31ad31;
+  border-width: 10px;
+  height: 30vh;
+  width: auto;
+}
+
+}
+.fire .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 150px;
+}
+
+.jm .eu{
+  display: flex;
+  justify-content: center;
+}
+.jm .eu a{
+  margin: 20px;
+  text-align: center;
 }
