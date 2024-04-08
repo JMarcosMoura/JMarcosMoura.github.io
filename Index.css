@@ -7,7 +7,6 @@ body{
   height: 100vh;
   font-family: Helvetica;
 }
-
 header{
   display: flex;
   align-items: center;
@@ -16,33 +15,28 @@ header{
   padding: 30px 0px;
 }
 
+/*_______________*/
+/*imagens de fundo*/
+.jm header, .jm main{
+  background-image: url('/Imagens/fundopapel2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jm .fundo{
+  background-image: url('/Imagens/fundoescuro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*configurar logo*/
 .log{
   height: auto;
   width: 50vw;
 }
-
 /*config. link*/
 .link{
   text-align: center;
 }
-
-/*header Charmander*/
-.fire header{
-  text-align: center;
-  flex-direction: column;
-}
-
-/*header Squirtle*/
-.water header{
-  
-}
-
-/*header Bulbasaur*/
-.tree header{
-  
-}
-
 /*distanciar os elementos da logo e das bordas*/
 .start{
   padding: 30px 40px;
@@ -105,6 +99,31 @@ h4{
 }
 ataques{
   color: #02975a;
+}
+/*textos para Bulbasaur*/
+.tree h1{
+  color: #348262;
+  font-size: 60px;
+}
+.tree h2{
+  color: #4b7d80;
+}
+.tree h4{
+  color: #02975a;
+}
+/*textos especiais para moura*/
+.jm h1{
+  font-size: 45px;
+  padding-top: 20px;
+}
+.jm h3{
+  color: #000;
+}
+.jm .fundo .text1{
+  color: #fff;
+}
+.jm .fundo h3, .jm footer h3{
+  color: #fff;
 }
 /*distancia do texto normal e o restante dos elementos que vem abaixo e ajuste dos cards:*/
 .text1{
@@ -179,14 +198,22 @@ ataques{
   transition: .5s;
 }
 
+/*_______________*/
 /*RESPONSIVO*/
 @media screen and (max-width: 900px){
-  .container{
+  .container, .imagens{
     flex-direction: column;
   }
-  .moura h1{
-  font-size: 40px;
-}
+  .imagens .desenho3{
+    width: 90vw;
+  }
+  .jm .social .soci{
+    height: 50px;
+  }
+  /*aproximar os links em "Sobre Mim"*/
+  .jm header .eu a{
+    margin: 0px;
+  }
 }
 
 /*_______________*/
@@ -195,8 +222,11 @@ hr{
   height: 1px;
   border-color: #6910a4;
 }
+.jm hr{
+  border-color: #000;
+}
 /*linhas especiais Charmander:*/
-.fire hr, .water hr {
+.fire hr, .water hr, .tree hr {
   border-style: solid;
   margin-right: 40px;
   margin-left: 40px;
@@ -212,43 +242,9 @@ hr{
   border-color: #914e0e;
   margin-left: 10px;
 }
-/*linhas especiais Bulbasaur*/
-.tree hr {
-  
-}
 
-/*CONFIG. IMAGEM DAS EVOLUÇÕES*/
-.fire img{
-  height: 350px;
-  padding-top: 40px;
-}
-.water img{
-  
-}
-.tree img{
-  
-}
-
-.moura .fotomoura{
-  border-radius: 50%;
-  border-style: double;
-  border-top: dashed;
-  border-left-style: dashed;
-  border-top-color: #31ad31;
-  border-left-color: #31ad31;
-  border-width: 10px;
-  height: 30vh;
-  width: auto;
-}
-
-}
-.fire .container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 150px;
-}
-
+/*_______________*/
+/*ajuste da imagem dos links de jm e alinhamento*/
 .jm .eu{
   display: flex;
   justify-content: center;
@@ -256,4 +252,37 @@ hr{
 .jm .eu a{
   margin: 20px;
   text-align: center;
+}
+.social .soci{
+  height: 100px;
+}
+
+/*_______________*/
+/*CONFIG. DOS DESENHOS*/
+.imagens{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagens .desenho, .desenho3{
+  height: 300px;
+  width: auto;
+  
+  border: 10px;
+  border-style: ridge;
+  border-color: #b58b24;
+  
+  margin: 30px;
+}
+
+/*_______________*/
+/*CONFIG. DAS IMAGENS DE "MINHAS OBRAS FAVORIT."*/
+.text1 .anime{
+  height: 300px;
+  width: auto;
+}
+
+/*_______________*/
+.jm footer{
+  background-color: #111111;
 }
